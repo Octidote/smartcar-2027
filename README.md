@@ -84,14 +84,32 @@
 | `决策记录/` | 为什么选这个组、为什么用这种构型、为什么走红外 |
 | `工作记录/提问台账.md` | 向组委会提的问题与答复追踪 |
 
-## 推送到 Gitee
+## 远端仓库
 
-仓库目前是本地库，还没有远端。拿到 Gitee 账号后：
+**主远端（origin）**
+
+```
+https://github.com/Octidote/smartcar-2027
+```
+
+推送：`git push`（凭据由 GitHub CLI 托管，不需要输密码）
+
+**Gitee 镜像（暂未接入）**
+
+竞赛官方要求托管在 Gitee，评审看的是 Gitee。当前只在 GitHub 上维护，Gitee 侧尚未接入推送。
+
+后续接入有两条路：
 
 ```bash
-git remote add origin git@gitee.com:<用户名>/<仓库名>.git
-git branch -M main
-git push -u origin main
+# 方案一：给 origin 挂第二个 push 地址，一条命令推两边
+git remote set-url --add --push origin https://github.com/Octidote/smartcar-2027.git
+git remote set-url --add --push origin https://gitee.com/eight-detoxifiers/smartcar-2027.git
+
+# 方案二：单独加一个 gitee 远端，需要时手动推
+git remote add gitee https://gitee.com/eight-detoxifiers/smartcar-2027.git
+git push gitee main
 ```
+
+> 注意：方案一里 Gitee 未认证时会导致每次 `git push` 都报错（GitHub 仍会成功）。认证一次之后就没问题了。
 
 > 竞赛要求的是**开发过程留痕**，所以不要等"做完再传"。从现在开始，每次有实质进展就提交一次。
