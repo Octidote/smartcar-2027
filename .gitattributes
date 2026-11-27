@@ -1,0 +1,25 @@
+# 默认按文本处理，统一 LF
+* text=auto eol=lf
+
+# 文档与图片按二进制处理，避免行尾转换损坏
+*.docx binary
+*.doc   binary
+*.xlsx  binary
+*.pptx  binary
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.step  binary
+*.stp   binary
+
+# 源码
+*.c     text
+*.h     text
+*.cpp   text
+*.hpp   text
+*.py    text
+*.md    text
+*.json  text
+*.txt   text

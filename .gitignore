@@ -1,0 +1,45 @@
+# 系统与编辑器
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# 文档生成工具的中间产物（可再生成，不必入库）
+output/
+__pycache__/
+*.pyc
+
+# 嵌入式编译产物
+firmware/**/build/
+firmware/**/Debug/
+firmware/**/Release/
+firmware/**/Objects/
+firmware/**/Listings/
+*.o
+*.d
+*.a
+*.elf
+*.hex
+*.bin
+*.map
+*.axf
+*.uvguix.*
+
+# 三维模型：只保留可编辑源文件
+*.stl
+*.3mf
+*.obj
+*.f3d
+
+# 大型附件
+*.zip
+*.7z
+*.rar
+*.mp4
+*.mov
+
+# 本地与密钥
+*.local
+secrets.*
